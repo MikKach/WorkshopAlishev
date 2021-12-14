@@ -1,5 +1,6 @@
 package by.itacademy.kachanovich.day6.task3;
 
+import java.util.Objects;
 import java.util.Random;
 
 public class Teacher {
@@ -30,5 +31,18 @@ public class Teacher {
     public void evaluate(Student student){
         Random ran = new Random();
 
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Teacher teacher = (Teacher) o;
+        return Objects.equals(name, teacher.name) && Objects.equals(subject, teacher.subject);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, subject);
     }
 }
