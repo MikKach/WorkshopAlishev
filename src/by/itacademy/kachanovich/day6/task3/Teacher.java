@@ -28,8 +28,31 @@ public class Teacher {
         this.subject = subject;
     }
 
-    public void evaluate(Student student){
+    public void evaluate(Student student) {
         Random ran = new Random();
+        int num = 2 + ran.nextInt(4);
+        String numString = "";
+        switch (num) {
+            case 2: {
+                numString = "неудовлетворительно";
+                break;
+            }
+            case 3: {
+                numString = "удовлетворительно";
+                break;
+            }
+            case 4: {
+                numString = "хорошо";
+                break;
+            }
+            case 5: {
+                numString = "отлично";
+                break;
+            }
+        }
+        System.out.printf("Преподаватель %s оценил студента с именем %s\n" +
+                "по предмету %s на оценку %s.", this.getName(), student.getName(), this.getSubject(),numString);
+
 
     }
 

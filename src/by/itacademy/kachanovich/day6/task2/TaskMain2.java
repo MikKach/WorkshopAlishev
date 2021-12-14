@@ -11,5 +11,6 @@ public class TaskMain2 {
         airplane.fuelUp(100);
         airplane.fuelUp(50);
         airplane.info();
+
     }
 }
